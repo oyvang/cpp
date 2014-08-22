@@ -15,7 +15,7 @@ int main() {
 
     int nrOfTemps = 5;
     double temp[nrOfTemps];
-    lesInnTemp(temp,nrOfTemps);
+    lesInnTemp(temp,nrOfTemps); 
 
 return 0;
 }

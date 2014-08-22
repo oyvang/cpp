@@ -21,7 +21,7 @@ int main(){
     double temp = 0;
     cout << "Skriv inn 5 temperaturer" << endl;
     for (int i = 0; i < antall; i++){  
-        cout << "Temp nr" << i+1 << ": ";
+        cout << "Temp nr" << i+1 << ": "; 
         cin>>temp;
         if(temp<10){
             tempUnder=tempUnder+1;
