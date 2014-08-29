@@ -9,12 +9,16 @@ Oppgave 3
     char tekst[5];
     char *pekeren = tekst;
     char letEtter = 'e';
-    cin >> tekst;        // evig løkke om bruker ikke skriver inn "e"
-    while (*pekeren != letEtter) {
-        *pekeren = letEtter;   
-        pekeren++; // pekeren kan peke på noe uønsket
+    cin >> tekst;      
+    while (*pekeren != letEtter) {  
+        *pekeren = letEtter;  
+        pekeren++; 
     }
 
+    //Man setter *pekeren til å peke på ett nytt element, det vil si når pekeren++ så kan den peke på noe helt annet.
+    og man vil få en evig løkke... for å ungå dette kan man ha en teller --> int i = 0; på 1 linje inn i while-løkka 
+    kan man skrive *(pekeren + i) = letEtter; og i slutten av while-løkka skrive i++; på denne måten vil lista bli fylt opp
+    og man vil ende på en 'e' ganske fort.
 Oppgave 4
 
     Original med feilbeskrivelse, se main.cpp på endret kode.
