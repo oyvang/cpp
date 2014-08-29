@@ -1,0 +1,32 @@
+Oppgave 2
+    Når vi initierer en peker kan det lønne seg å skrive det på en av
+    de to måtene under:
+    "char *linje = nullptr; // eller char *linje = 0;"
+    Dette vil si at pekeren skal peke på plassen 0 i minnet som ikke 
+    brukers til noe fornuftig. På denne måten blir ikke noe ødelagt.
+
+Oppgave 3
+    char tekst[5];
+    char *pekeren = tekst;
+    char letEtter = 'e';
+    cin >> tekst;        // evig løkke om bruker ikke skriver inn "e"
+    while (*pekeren != letEtter) {
+        *pekeren = letEtter;   
+        pekeren++; // pekeren kan peke på noe uønsket
+    }
+
+Oppgave 4
+
+    Original med feilbeskrivelse, se main.cpp på endret kode.
+    Litt vanskelig å vite hvordan dere har tenkt at det egentlig
+    skal være, så jeg lagde bare en kjørbark kode.
+
+    int a = 5;
+    int &b; //sier at int skal være en adresse? 
+    int *c; // ikke feil, men burde initieres til 0 eller nullptr
+    c = &b; // kommer ann på om b har blitt initialisert 
+    *a = *b + *c;
+    &b = 2; // kan vell ikke endre en adrese slik?
+
+
+    
