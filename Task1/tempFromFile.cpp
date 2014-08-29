@@ -16,25 +16,6 @@ int main() {
     int nrOfTemps = 5;
     double temp[nrOfTemps];
     lesInnTemp(temp,nrOfTemps); 
-
-return 0;
-}
-
-
-void lesInnTemp(double temp[], int nrOfTemps) {
-    const char filename[] = "tempfile.dat";
-    ifstream file;
-
-    file.open(filename); 
-    if (!file) {
-    cout << "Can not find file!" << endl;
-    exit(EXIT_FAILURE); 
-    }
-    
-    for (int i = 0; i < nrOfTemps; i++) {
-        file >> temp[i];
-    }
-    file.close();
     
     int tempUnder= 0;
     int tempBetween = 0;
@@ -56,4 +37,22 @@ void lesInnTemp(double temp[], int nrOfTemps) {
     cout << "Temp mellom 10-20 : " << tempBetween << endl;
     cout << "Temp over 20 : " << tempOver << endl;
 
+return 0;
+}
+
+
+void lesInnTemp(double temp[], int nrOfTemps) {
+    const char filename[] = "tempfile.dat";
+    ifstream file;
+
+    file.open(filename); 
+    if (!file) {
+    cout << "Can not find file!" << endl;
+    exit(EXIT_FAILURE); 
+    }
+    
+    for (int i = 0; i < nrOfTemps; i++) {
+        file >> temp[i];
+    }
+    file.close();
 }
